@@ -6,8 +6,6 @@ Demos:
 
 https://jli.host/s-h-a-n-p-e-s/frontend/
 
-https://jli.host/radical/index.html
-
 # Make your own!
 
 Clone the repository
