@@ -2,22 +2,30 @@
 <html>
   <head>
     <title>:O</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet"> 
     <style>
     body {
       margin: 0;
+      color: #fff;
+      font-family: 'Roboto Mono';
     }
     canvas {
       width: 100%;
       height: 100%;
       display: block;
     }
+    h1 {
+      position: fixed;
+      bottom: 1em;
+      width: 100%;
+      text-align: center;
+      pointer-events: none;
+    }
     p {
       position: fixed;
       bottom: 0;
       right: 0;
       margin: 10px;
-      color: #fff;
-      font-family: monospace;
     }
     a {
       color: inherit;
@@ -26,6 +34,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
+    <h1>drag to rotate</h1>
     <p>made by
       <a href="https://github.com/veggiedefender">jesse li</a> |
       <a href="https://github.com/veggiedefender/s-h-a-n-p-e-s">source</a>
