@@ -6,6 +6,14 @@ var camera = new THREE.PerspectiveCamera(20, window.innerWidth / window.innerHei
 var renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
+
+window.addEventListener('resize', function() {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+}, false);
+
+/* iOS touchstart dimming fix */
 renderer.domElement.addEventListener('touchstart', function(e) {
   e.preventDefault();
 });
