@@ -12,7 +12,7 @@ def discretize(pixels):
     Returns:
         a 2D array of boolean values. Colored pixels = True, white = False
     """
-    return np.invert(pixels.transpose().sum(axis=0).transpose().astype(bool))
+    return np.invert(pixels.T.sum(axis=0).T.astype(bool))
 
 front = discretize(np.array(Image.open("front.png")))
 side = discretize(np.array(Image.open("side.png")))
