@@ -1,7 +1,8 @@
-#! /usr/bin/env python3
+#!/usr/bin/env python3
 
 from PIL import Image
 import numpy as np
+
 
 def discretize(pixels):
     """Transforms a 3D array of pixel values into a 2D array
@@ -32,6 +33,6 @@ for y in range(front.shape[0]):
 center = [front.shape[1] / 2, front.shape[0] / 2, side.shape[1] / 2]
 
 # add random noise to disrupt grid pattern
-points = [list(point + np.random.normal(0, 0.2, 3)) for point in points]
+points = [list((point + np.random.normal(0, 0.2, 3)).round(4)) for point in points]
 
 print(f"window.points = {points}; window.center = {center}")
